@@ -1,11 +1,12 @@
 Package: r4issactoast
 Type: Package
-Title: What the Package Does (Title Case)
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Date: 2017-07-05
+Title: Favorite R Functions for <www.issactoast.com>
+Authors@R: c(person("Issac", "Lee", role = c("aut", "cre"),
+                     email = "issactoast@gmail.com"))
+Description: This package has many functions which are used
+    in <www.issactoast.com> blog statistics posts. All the explations
+    and applications of functions can be found in the website given in the title.
+License: MIT + file LICENSE
 Encoding: UTF-8
-LazyData: true
