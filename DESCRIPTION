@@ -10,3 +10,4 @@ Description: This package has many functions which are used
     and applications of functions can be found in the website given in the title.
 License: MIT + file LICENSE
 Encoding: UTF-8
+RoxygenNote: 6.0.1
