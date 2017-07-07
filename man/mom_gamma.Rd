@@ -10,10 +10,11 @@ mom_gamma(sample_g)
 \item{sample_g}{the given sample to calculate the estimate of the parameters.}
 }
 \value{
-A 2 by 1 vector containing estimate of parameters k and theta: c(k, theta)
+A 2 by 1 vector containing estimate of parameters k and theta: c(k_hat, theta_hat)
 }
 \description{
-mom_gamma function will calculate mom estimate for the shape parameter "k" and the scale parameter "theta" by using given sample.
+mom_gamma function will calculate mom estimate for the shape parameter
+"k" and the scale parameter "theta" by using given sample.
 }
 \examples{
   my_sample <- rgamma(50, shape = 2, scale = 3)
