@@ -6,8 +6,11 @@ Title: Favorite R Functions for <www.issactoast.com>
 Authors@R: c(person("Issac", "Lee", role = c("aut", "cre"),
                      email = "issactoast@gmail.com"))
 Description: This package has many functions which are used
-    in <www.issactoast.com> blog statistics posts. All the explations
+    in <www.issactoast.com> blog's statistics posts. All the explations
     and applications of functions can be found in the website given in the title.
 License: MIT + file LICENSE
 Encoding: UTF-8
 RoxygenNote: 6.0.1
+Depends: R (>= 3.4.0)
+Imports: 
+  stats (>= 3.4.0)
