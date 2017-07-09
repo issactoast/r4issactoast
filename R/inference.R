@@ -42,7 +42,10 @@ mle_gamma <- function(sample_g){
     f <- function(k){ mean(log(sample_g)) -
             log(mean(sample_g)/k) -  digamma(k)}
     # mle
-    mle_k <- stats::uniroot(f, mom_k + c(-2, 2))
+    interval <- mom_k + c(-2, 2)
+    mle_k <- stats::uniroot(f,
+                            lower = interval[1],
+                            upper = interval[2])
     mle_theta <- mean(sample_g) * (1 / mle_k$root)
 
     # result

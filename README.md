@@ -34,7 +34,7 @@ Calculate the method of moment estimator of gamma distribution parameters for gi
 my_sample <- rgamma(50, shape = 2, scale = 3)
 mom_gamma(my_sample)
 #>     k_hat theta_hat 
-#>  1.800040  3.416922
+#>  2.065391  3.121430
 ```
 
 ### mle\_gamma()
@@ -47,5 +47,5 @@ Calculate the maximum likelihood estimator of gamma distribution parameters for 
 my_sample <- rgamma(50, shape = 2, scale = 3)
 mle_gamma(my_sample)
 #>     k_hat theta_hat 
-#>  2.104953  3.274575
+#>  2.101635  2.766951
 ```
