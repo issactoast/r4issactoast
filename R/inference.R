@@ -18,7 +18,6 @@ mom_gamma <- function(sample_g){
 
     c(k_hat = mom_k, theta_hat = mom_theta)
 }
-
 #' Maximum Likelihood Estimator for gamma dist.
 #'
 #' mle_gamma function will calculate mle estimate for the shape parameter
@@ -40,14 +39,15 @@ mle_gamma <- function(sample_g){
 
     # equation for k
     f <- function(k){ mean(log(sample_g)) -
-            log(mean(sample_g)/k) -  digamma(k)}
+            log(mean(sample_g)) - log(k) - digamma(k)}
     # mle
-    interval <- mom_k + c(-2, 2)
+    my_upper <- 2 * mom_k
     mle_k <- stats::uniroot(f,
-                            lower = interval[1],
-                            upper = interval[2])
+                            lower = 0.01,
+                            upper = my_upper)
     mle_theta <- mean(sample_g) * (1 / mle_k$root)
 
     # result
     c(k_hat = mle_k$root, theta_hat = mle_theta)
 }
+
