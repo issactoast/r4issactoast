@@ -39,15 +39,15 @@ mle_gamma <- function(sample_g){
 
     # equation for k
     f <- function(k){ mean(log(sample_g)) -
-            log(mean(sample_g)) - log(k) - digamma(k)}
+            (log(mean(sample_g)) - log(k)) - digamma(k)}
     # mle
+    my_lower <- 0.5 * mom_k
     my_upper <- 2 * mom_k
     mle_k <- stats::uniroot(f,
-                            lower = 0.01,
+                            lower = my_lower,
                             upper = my_upper)
     mle_theta <- mean(sample_g) * (1 / mle_k$root)
 
     # result
     c(k_hat = mle_k$root, theta_hat = mle_theta)
 }
-
