@@ -34,7 +34,7 @@ Calculate the method of moment estimator of gamma distribution parameters for gi
 my_sample <- rgamma(50, shape = 2, scale = 3)
 mom_gamma(my_sample)
 #>     k_hat theta_hat 
-#>  2.065391  3.121430
+#>  1.870048  3.015523
 ```
 
 ### mle\_gamma()
@@ -47,5 +47,19 @@ Calculate the maximum likelihood estimator of gamma distribution parameters for 
 my_sample <- rgamma(50, shape = 2, scale = 3)
 mle_gamma(my_sample)
 #>     k_hat theta_hat 
-#>  2.101635  2.766951
+#>  2.955463  1.761099
+```
+
+### newton\_method()
+
+-   Related posts: [Optimization with R: 1. Newton's method](www.issactoast.com/92)
+
+Finding root of the function f using f and its derivative.
+
+``` r
+x_cu <- function(x){x^3}
+x_sq <- function(x){3*x^2}
+newton_method(f = x_cu, df = x_sq, x_0 = 3)
+#> Final value of function: 9.9616e-17
+#> [1] 4.63564e-06
 ```

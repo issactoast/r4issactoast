@@ -2,4 +2,5 @@
 
 export(mle_gamma)
 export(mom_gamma)
+export(newton_method)
 importFrom(stats,uniroot)
