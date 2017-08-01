@@ -5,6 +5,8 @@
 #'
 #' @param xrange the x axis range that you want to show in plot
 #' @param yrange the y axis range that you want to show in plot
+#' @param xlab the x axis lable
+#' @param ylab the y axis lable
 #' @param ... you can freely use other options from plot function
 #' @return the plot with coloring and x and y axis line, plus dash support line
 #' @examples
@@ -15,14 +17,15 @@
 #' @importFrom grDevices axisTicks
 #' @import graphics
 #' @export
-emptyPlot <- function(xrange = c(0, 1), yrange = c(0, 1), ...){
+emptyPlot <- function(xrange = c(0, 1), yrange = c(0, 1),
+                      xlab = "", ylab = "", ...){
     par(bg = "light cyan")  # 팔레트 색깔 하늘색으로 설정
 
     # Generate empty plot
     plot(# x, y 그래프 범위 설정
         c(0,0),c(1,1),
-        xlab = "",        # x 축 제목 생략
-        ylab = "",        # y 축 제목 생략
+        xlab = xlab,        # x 축 제목 생략
+        ylab = ylab,        # y 축 제목 생략
         xlim = c(xrange[1], xrange[2]),
         ylim = c(yrange[1], yrange[2]),
         type = 'n',         # '표시 안함'으로 설정

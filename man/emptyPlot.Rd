@@ -4,12 +4,16 @@
 \alias{emptyPlot}
 \title{Make your base plot}
 \usage{
-emptyPlot(xrange = c(0, 1), yrange = c(0, 1), ...)
+emptyPlot(xrange = c(0, 1), yrange = c(0, 1), xlab = "", ylab = "", ...)
 }
 \arguments{
 \item{xrange}{the x axis range that you want to show in plot}
 
 \item{yrange}{the y axis range that you want to show in plot}
+
+\item{xlab}{the x axis lable}
+
+\item{ylab}{the y axis lable}
 
 \item{...}{you can freely use other options from plot function}
 }
