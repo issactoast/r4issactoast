@@ -21,8 +21,8 @@ emptyPlot <- function(xrange = c(0, 1), yrange = c(0, 1), ...){
     # Generate empty plot
     plot(# x, y 그래프 범위 설정
         c(0,0),c(1,1),
-        # xlab = "",        # x 축 제목
-        # ylab = "",        # y 축 제목 생략
+        xlab = "",        # x 축 제목 생략
+        ylab = "",        # y 축 제목 생략
         xlim = c(xrange[1], xrange[2]),
         ylim = c(yrange[1], yrange[2]),
         type = 'n',         # '표시 안함'으로 설정
