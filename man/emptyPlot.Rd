@@ -4,7 +4,7 @@
 \alias{emptyPlot}
 \title{Make your base plot}
 \usage{
-emptyPlot(xrange, yrange, ...)
+emptyPlot(xrange = c(0, 1), yrange = c(0, 1), ...)
 }
 \arguments{
 \item{xrange}{the x axis range that you want to show in plot}

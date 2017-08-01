@@ -12,8 +12,10 @@
 #'   b <- a^2
 #'   emptyPlot(c(-2, 2), c(-2, 2), main = "title", xlab = "x", ylab = "y")
 #'   points(a, b, type = "l", col = "red")
+#' @importFrom grDevices axisTicks
+#' @import graphics
 #' @export
-emptyPlot <- function(xrange, yrange, ...){
+emptyPlot <- function(xrange = c(0, 1), yrange = c(0, 1), ...){
     par(bg = "light cyan")  # 팔레트 색깔 하늘색으로 설정
 
     # Generate empty plot
