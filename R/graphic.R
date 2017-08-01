@@ -48,3 +48,50 @@ emptyPlot <- function(xrange = c(0, 1), yrange = c(0, 1),
     # 배경색 리셋
     par(bg = "white")
 }
+
+#' Add line in the existing plot
+#'
+#' @param x x position vector
+#' @param y y position vector
+#' @param ... you can freely use other options from points function
+#' @return line in the plot
+#' @export
+add_line <- function(x, y, ...){
+    if (length(x) != length(y)) {
+        warning("x and y should be same length vector")
+        return(NULL)
+    }
+    points(x, y, type = "l", ...)
+}
+
+#' Add points in the existing plot
+#'
+#' @param x x position vector
+#' @param y y position vector
+#' @param ... you can freely use other options from points function
+#' @return points in the plot
+#' @export
+add_points <- function(x, y, ...){
+    if (length(x) != length(y)) {
+        warning("x and y should be same length vector")
+        return(NULL)
+    }
+    points(x, y, ...)
+}
+
+#' Add function in the existing plot
+#'
+#' @param f function you want to add
+#' @param ... you can freely use other options from points function
+#' @return line function in the plot
+#' @export
+add_fcn <- function(f, ...){
+    loc <- par("usr")
+    x <- seq(loc[1], loc[2], length.out = 101)
+    y <- f(x)
+    add_line(x, y, ...)
+}
+
+
+
+
