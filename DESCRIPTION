@@ -1,6 +1,6 @@
 Package: r4issactoast
 Type: Package
-Version: 0.1.0
+Version: 0.1.1
 Date: 2017-07-05
 Title: Favorite R Functions for <www.issactoast.com>
 Authors@R: c(person("Issac", "Lee", role = c("aut", "cre"),
