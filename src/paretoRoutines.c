@@ -37,12 +37,14 @@ void paretodens(double *x, double *alpha, double *x_m,
   }
 }
 
-static const R_CMethodDef cMethods[] = {
+static const
+R_CMethodDef cMethods[] = {
     {"paretodens", (DL_FUNC) &paretodens, 7},
     NULL
 };
 
-void R_init_paretoRoutiones(DllInfo *info){
+void
+R_init_paretoRoutiones(DllInfo *info){
     /* Register the .C routines.
      No .Call, .Fortran(), .External()
      routines, pass those arrays as NULL.
