@@ -12,5 +12,5 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 RoxygenNote: 6.0.1
 Depends: R (>= 3.4.0)
-Imports: 
+Imports:
   stats (>= 3.4.0)
