@@ -35,8 +35,5 @@ dpareto <- function(x, alpha, x_m, log.p = FALSE){
                  as.integer(log.p),
                  value = as.double(density),
                  PACKAGE = "r4issactoast")$value
-    if (any(is.nan(result))) {
-        warning("\n All parameters should be positive.\n NaN is generated.")
-    }
     result
 }
