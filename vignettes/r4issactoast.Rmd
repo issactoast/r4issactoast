@@ -43,9 +43,9 @@ where $x_m > 0$ and $\alpha > 0$.
     
 #. example
     
-    ```{r }
-    library(r4issactoast)
-    dpareto(1:5, 2, 3)
-    dpareto(1:5, 2, -3:3)
-    dpareto(1:5, 2:5, 3)
-    ```
+```{r }
+library(r4issactoast)
+dpareto(1:5, 2, 3)
+dpareto(1:5, 2, -3:3)
+dpareto(1:5, 2:5, 3)
+```
