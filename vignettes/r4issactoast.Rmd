@@ -1,0 +1,51 @@
+---
+title: "r4issactoast"
+author: "Issac Lee"
+date: "`r Sys.Date()`"
+output:
+  rmarkdown::html_vignette:
+    fig_caption: yes
+vignette: >
+  %\VignetteIndexEntry{r4issactoast package vignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+##  Functions in r4issactoast
+
+### dpareto
+
+The probability density function of the pareto distribution.
+
+$$
+\frac{\alpha\,x_\mathrm{m}^\alpha}{x^{\alpha+1}}\text{ for }x\ge x_m
+$$
+
+where $x_m > 0$ and $\alpha > 0$.
+
+1. usage
+        
+        dpareto(x, alpha, x_m, log.p = FALSE)
+
+#. parameters
+
+    `x` is the point where the pdf to be evaluated
+    
+    `alpha` is the shape parameter of pareto distribution
+    
+    `x_m` is the scale parameter of pareto distribution
+    
+    `log.p` is an indicator. Use log.p = TRUE when you want to get a result in a log scale.
+
+#. return
+
+    The pdf value of the pareto distribution with parameters alpha and x_m evaluated at x.
+    
+#. example
+    
+    ```{r}
+    library(r4issactoast)
+    dpareto(1:5, 2, 3)
+    dpareto(1:5, 2, -3:3)
+    dpareto(1:5, 2:5, 3)
+    ```
