@@ -6,8 +6,8 @@ output:
   rmarkdown::html_vignette:
     fig_caption: yes
 vignette: >
-  %\VignetteIndexEntry{r4issactoast package vignette}
   %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteIndexEntry{r4issactoast package vignette}
   %\VignetteEncoding{UTF-8}
 ---
 
